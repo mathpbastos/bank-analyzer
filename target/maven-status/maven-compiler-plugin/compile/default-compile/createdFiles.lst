@@ -1,0 +1,6 @@
+edu/learning/bank_analizer/main/AppRun.class
+edu/learning/bank_analizer/analyzer/BankStatementAnalyzer.class
+edu/learning/bank_analizer/parser/BankStatementCSVParser.class
+edu/learning/bank_analizer/parser/IBankStatementParser.class
+edu/learning/bank_analizer/processor/BankStatementProcessor.class
+edu/learning/bank_analizer/model/BankTransaction.class

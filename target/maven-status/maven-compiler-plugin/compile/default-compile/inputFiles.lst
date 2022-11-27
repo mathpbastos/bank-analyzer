@@ -1,0 +1,6 @@
+/home/b1n/codes/java/bank_analizer/src/main/java/edu/learning/bank_analizer/main/AppRun.java
+/home/b1n/codes/java/bank_analizer/src/main/java/edu/learning/bank_analizer/model/BankTransaction.java
+/home/b1n/codes/java/bank_analizer/src/main/java/edu/learning/bank_analizer/parser/BankStatementCSVParser.java
+/home/b1n/codes/java/bank_analizer/src/main/java/edu/learning/bank_analizer/parser/IBankStatementParser.java
+/home/b1n/codes/java/bank_analizer/src/main/java/edu/learning/bank_analizer/processor/BankStatementProcessor.java
+/home/b1n/codes/java/bank_analizer/src/main/java/edu/learning/bank_analizer/analyzer/BankStatementAnalyzer.java
