@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.learning.bank_analizer.filter.IBankTransactionFilter;
+import edu.learning.bank_analizer.filter.IBankTransactionSummarizer;
 import edu.learning.bank_analizer.model.BankTransaction;
 
 public class BankStatementProcessor {
@@ -60,6 +61,25 @@ public class BankStatementProcessor {
 			}
 		}
 		return result;
+	}
+	
+	public List<BankTransaction> findTransactionsGreaterThanEqual(int amount){
+		return findTransactions(bankTransaction -> bankTransaction.getAmount() >= amount);
+	}
+	
+	public double summarizeTransactions(IBankTransactionSummarizer bankTransactionSummarizer) {
+		double result = 0;
+		for(BankTransaction bankTransaction : bankTransactions) {
+			result = bankTransactionSummarizer.summarize(result, bankTransaction);
+		}
+		return result;
+	}
+	
+	public double calculateTotalInMonth(Month month) {
+		return summarizeTransactions((acc, bankTransaction) -> 
+				bankTransaction.getDate().getMonth() == month ? 
+						acc + bankTransaction.getAmount() : acc);
+		
 	}
 	
 }
